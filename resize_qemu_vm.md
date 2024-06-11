@@ -1,6 +1,6 @@
-# How to resize a qcow2 file ?
+# How to resize a qemu virtual machine ?
 
-It's not always easy to resize a qemu partition. Here is a generic walkthrough to resize a qcow2 file and the associated VM partition.
+It's not always easy to resize a qemu virtual machine. Here is a generic walkthrough to resize a qcow2 file and extend the size of the associated VM partition.
 
 ### Check the storage of the virtual machine
 
