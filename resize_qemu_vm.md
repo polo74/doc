@@ -27,7 +27,7 @@ Sector size (logical/physical): 4096 bytes / 4096 bytes
 I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 ```
 
-We an see that:
+We can see that:
 - our **disk (/dev/vda)** has a size of **5Gio**
 - and our **root partition** is **3.9G** heavy.
 
