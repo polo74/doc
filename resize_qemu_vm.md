@@ -213,3 +213,12 @@ I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 ```
 
 Our root partition is now 12.9G!
+
+### Resize the btrfs partition
+
+Here, because I have a btrfs partition, I have to extend it:
+
+```
+[paul@localhost ~]$ sudo btrfs filesystem resize max /
+Resize device id 1 (/dev/vda4) from 3.92GiB to max
+```
