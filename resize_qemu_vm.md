@@ -79,7 +79,7 @@ We can notice the the following status:
 
 Now, we have to resize the partition.
 
-## PART II: Extend the partition EXT4 partition
+## PART II: Extend the partition BTRFS partition
 
 To extend our partition, we use the `parted` tool. If you have a GUI, you can use Gparted.
 
@@ -222,3 +222,5 @@ Here, because I have a btrfs partition, I have to extend it:
 [paul@localhost ~]$ sudo btrfs filesystem resize max /
 Resize device id 1 (/dev/vda4) from 3.92GiB to max
 ```
+
+And it's done :)
