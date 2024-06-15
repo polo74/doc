@@ -7,4 +7,4 @@ You can find here:
 - 🗒️ some lists,
 - 🧻 and a lot of bullshit
 
-Enjoy!!
+Enjoy 😃
