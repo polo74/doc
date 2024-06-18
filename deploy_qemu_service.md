@@ -48,7 +48,7 @@ nc -l 80
 On the host, try to connect to the guest with the same port:
 
 ```
-nc 192.168.100.156
+nc 192.168.100.156 80
 ```
 
 If the connection dont work, you probably have a problem in your routing network. Be sure that you don't use the default NAT network.
