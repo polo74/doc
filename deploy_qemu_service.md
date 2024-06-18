@@ -1,15 +1,16 @@
 # How to deploy service with QEMU and QEMU routing network
 
-On QEMU, there are many network configurations as:
+In QEMU, there are many network configurations as:
 - NAT: (Network address translation) using NAT protocol to allow guest to communicate outside the host,
 - bridged: an interface on the hsot machine is created for each guest,
 - isolated: a fully isolated network from real world with only guests,
 - routed: a network with the host and guests machines.
 
-In this tutorial, we want to create a service in a guest machine and made it accessible from outside the host machine. To do this, we will use:
-- virt-manager to manage virtual machines (but you can also use virsh),
+In this tutorial, we want to create a service in a guest machine (a VM) and made it accessible from outside the host machine using the routed network of QEMU. To do this, we will use:
 - port forwarding with firewall-cmd,
 - netcat to test our connection.
+
+Here is 
 
 The host machine is a fedora machine. If you are under a debian-like machine, you can use ufw instead of forewall-cmd.
 
