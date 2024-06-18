@@ -6,11 +6,26 @@ In QEMU, there are many network configurations as:
 - isolated: a fully isolated network from real world with only guests,
 - routed: a network with the host and guests machines.
 
-In this tutorial, we want to create a service in a guest machine (a VM) and made it accessible from outside the host machine using the routed network of QEMU. To do this, we will use:
+In this tutorial, we want to create a service in a guest machine (virtual machine) and made it accessible from outside the host machine using the routed network of QEMU. To do this, we will use:
 - port forwarding with firewall-cmd,
 - netcat to test our connection.
 
-Here is 
+### Architecture
+
+The following schema explain the network architecture of a QEMU server with a routing network: 
+```mermaid
+flowchart TD
+    A[Outside network] <--> |physical interface| B
+    B[Host server] <--> |logical interface| C
+    C[Routed network]
+```
+
+In this schema:
+- the host server is the machine with QEMU/KVM,
+- the outside network is the physical network with other computers,
+- the routed network is a logical network with VM guests.
+
+### Tutorial conditions
 
 The host machine is a fedora machine. If you are under a debian-like machine, you can use ufw instead of forewall-cmd.
 
@@ -18,19 +33,19 @@ For the tutorial, we will create as example an empty NGINX server. I let you ada
 
 ## I: Open the port with firewall-cmd
 
-To start this tutorial, I suppose that you already have an empty qemu virtual machine, plugged in a routed network and that you know the port you have to open for your service.
+To start this tutorial, I suppose that you already have an empty qemu virtual machine linked with a qemu routed network and that you know the ports you must to open for your service.
 For our case, we must open the 80 port. 
 
 ### Check connectivity between host and guest
 
 At first, we can check the connectivity between the host and the guest with ncat
 
-> On the guest, open the required port
+On the guest, open the required port
 ```
 nc -l 80
 ```
 
-> On the host, try to connect to the guest with the same port:
+On the host, try to connect to the guest with the same port:
 
 ```
 nc 192.168.100.156
