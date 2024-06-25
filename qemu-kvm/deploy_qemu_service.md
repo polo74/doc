@@ -45,31 +45,29 @@ On virt-manager, click right on your connexion -> "details"
 
 ![Click right on your connection](../assets/test-1.png)
 
-Go on "Virtual networks"
+Go on the "Virtual networks" tab and click in the bottom right cross to add a new network
 
 ![Open the "Virtual networks" menu](../assets/test-2.png)
 
-Create a new network:
-
-![Create he new network](../assets/test-3.png)
-
 Name your network, select the "Routed" mode and select an unused IP address: 
 
-![Configure the new network](../assets/test-4.png)
+![Configure the new network](../assets/test-3.png)
 
 ### Configure the virtual machine
 
 Open your virtual machine by double clicking on it
 
-![Open the new VM](../assets/test-5.png)
+![Open the new VM](../assets/test-4.png)
 
-Show the details
+Open the VM details and select the NIC device
 
-![Go on the VM details](../assets/test-6.png)
+![Go on the VM details](../assets/test-5.png)
 
 Alter the existing network interface or create a new one to use the new routed network, and apply modifications
 
-![Add a the new routed network interface](../assets/test-7.png)
+![Add a the new routed network interface](../assets/test-6.png)
+
+You have now a virtual machine linked on a routed network. Reboot it to apply the changes.
 
 ## II: Open the port with firewall-cmd
 
