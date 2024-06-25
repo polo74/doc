@@ -35,15 +35,41 @@ The host machine is a fedora machine. If you are under a debian-like machine, yo
 
 For the tutorial, we will create as example an empty NGINX server. I let you adapt the procedure the software you want.
 
-## I: Create the virtual machine and configure network
+## I: Configure the network and the machine
 
-To create the virtual machine and configure the routed network, we use the tool virt-manager. You alse can use virsh if you're CLI only.
-
-### Create the virtual machine
+To configure configure the routed network and add our VM into, we use the tool virt-manager. You alse can use virsh if you're CLI only.
 
 ### Create the routed network
 
-### Configure the virtual machine 
+On virt-manager, click right on your connexion -> "details"
+
+> TODO
+
+Go on "Virtual networks"
+
+> TODO
+
+Create a new network:
+
+> TODO
+
+Name your network, select the "Routed" mode and select an unused IP address: 
+
+> TODO
+
+### Configure the virtual machine
+
+Open your virtual machine by double clicking on it
+
+> TODO
+
+Show the details
+
+> TODO
+
+Alter the existing network interface or create a new one to use the new routed network, and apply modifications
+
+> TODO
 
 ## II: Open the port with firewall-cmd
 
