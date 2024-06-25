@@ -1,4 +1,4 @@
-# How to deploy service using QEMU and QEMU routing network
+# Deploy service using QEMU and QEMU routing network
 
 In QEMU, there are many network configurations as:
 - NAT: (Network address translation) using NAT protocol to allow guest to communicate outside the host,
@@ -12,7 +12,7 @@ In this tutorial, we want to create a service in a guest machine (virtual machin
 
 ### Motivation
 
-Why should we use the routed network ? 
+The routed network allows to simulate a real network, which can communicate with real world thanks to the host router. We can also apply firewall rules on the host to protect guests.
 
 ### Architecture
 
@@ -31,13 +31,19 @@ In this schema:
 
 ### Tutorial conditions
 
-The host machine is a fedora machine. If you are under a debian-like machine, you can use ufw instead of forewall-cmd.
+The host machine is a fedora machine. If you are under a debian-like machine, you can use ufw instead of firewall-cmd.
 
 For the tutorial, we will create as example an empty NGINX server. I let you adapt the procedure the software you want.
 
 ## I: Create the virtual machine and configure network
 
+To create the virtual machine and configure the routed network, we use the tool virt-manager. You alse can use virsh if you're CLI only.
 
+### Create the virtual machine
+
+### Create the routed network
+
+### Configure the virtual machine 
 
 ## II: Open the port with firewall-cmd
 
