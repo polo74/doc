@@ -2,17 +2,18 @@
 
 In QEMU, there are many network configurations as:
 - NAT: (Network address translation) using NAT protocol to allow guest to communicate outside the host,
-- bridged: an interface on the hsot machine is created for each guest,
+- bridged: a vrtual interface on the host machine is created for each guest,
 - isolated: a fully isolated network from real world with only guests,
-- routed: a network with the host and guests machines.
+- routed: a network accessible from the host and guests machines.
 
 In this tutorial, we want to create a service in a guest machine (virtual machine) and made it accessible from outside the host machine using the routed network of QEMU. To do this, we will use:
-- port forwarding with firewall-cmd,
-- netcat to test our connection.
+- virt-manager to manage virtual machines and virtual networks
+- firewall-cmd to manage host port-forwarding,
+- netcat to test the connection.
 
 ### Motivation
 
-The routed network allows to simulate a real network, which can communicate with real world thanks to the host router. We can also apply firewall rules on the host to protect guests.
+The routed network allows to simulate a real network, which can communicate with real world thanks to the host router. We can also apply firewall rules and filter ports on the host to protect guests.
 
 ### Architecture
 
