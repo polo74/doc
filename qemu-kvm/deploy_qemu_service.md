@@ -43,7 +43,7 @@ To configure configure the routed network and add our VM into, we use the tool v
 
 On virt-manager, click right on your connexion -> "details"
 
-> TODO
+![click right on your connection](../assets/test-1.png)
 
 Go on "Virtual networks"
 
